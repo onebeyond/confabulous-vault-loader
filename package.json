@@ -6,7 +6,7 @@
   "scripts": {
     "test": "NODE_ENV=test mocha --recursive tests",
     "prepush": "npm run lint && npm test",
-    "docker": "cd tests; docker-compose up",
+    "lint": "eslint .",
     "vault": "docker run -it --link vault --rm -e VAULT_ADDR=http://vault:8200 --entrypoint=/bin/sh sjourdan/vault -c \"vault auth $VAULT_TOKEN &>/dev/null; vault $VAULT_ARGS\""
   },
   "keywords": [

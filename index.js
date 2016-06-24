@@ -4,8 +4,6 @@ var request = require('request')
 var async = require('async')
 var duration = require('parse-duration')
 var merge = require('lodash.merge')
-var pick = require('lodash.pick')
-var find = require('lodash.find')
 var contains = require('lodash.contains')
 var format = require('util').format
 var crypto = require('crypto')
@@ -106,7 +104,7 @@ module.exports = function(_options, postProcessors) {
         function isModified(res) {
             var newChecksum = generateChecksum(res.body.data)
             var modified = checksum !== newChecksum
-            checkSum = newChecksum
+            checksum = newChecksum
             return modified
         }
 

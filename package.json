@@ -1,6 +1,6 @@
 {
   "name": "confabulous-vault-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A confabulous vault loader",
   "main": "index.js",
   "scripts": {

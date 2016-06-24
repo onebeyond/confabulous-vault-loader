@@ -51,7 +51,6 @@ vaultcmd unseal <INSERT_UNSEAL_KEY>
 ### Upload a policy
 ```
 vaultcmd policy-write demo-live /tmp/policies/live/demo.json
-
 ```
 ### Configure an app-id login
 ```

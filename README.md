@@ -38,8 +38,10 @@ docker run -d -p 8200:8200 --hostname vault --name vault sjourdan/vault
 docker logs vault
 ```
 ### Make note of the Unseal Key and Root Token and configure exports
+```
 export VAULT_ADDR=http://vault:8200
 export VAULT_TOKEN=<INSERT_TOKEN_HERE>
+```
 ### Create an alias so you can execute vault commands from a container
 ```
 alias vaultcmd="docker run --volume $(pwd)/tests/vault:/tmp --link vault --rm -e VAULT_ADDR -e VAULT_TOKEN sjourdan/vault"

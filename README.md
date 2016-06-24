@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/guidesmiths/confabulous-vault-loader.png)](https://travis-ci.org/guidesmiths/confabulous-vault-loader)
 # Confabulous Vault Loader
 Confabulous-Vault-Loader is an Vault Loader for [Confabulous](https://github.com/guidesmiths/confabulous) - a hierarchical, asynchronous config loader and post processor.
 

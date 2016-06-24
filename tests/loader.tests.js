@@ -123,21 +123,21 @@ describe('Vault Loader', function() {
     it('should report unexpected status codes', function(done) {
         loader({ url: 'http://localhost:8200', path: 'sys/foo', method: 'app-id', appId: 'svc-demo-api' , userId: 'demo-live' })(confabulous, function(err, config) {
             assert(err)
-            assert.equal(err.message, 'http://localhost:8200/v1/sys/foo returned 500')
+            assert.equal(err.message, 'http://localhost:8200/v1/sys/foo returned 403')
             done()
         })
     })
 
     it('should report 404s when mandatory', function(done) {
-        loader({ url: 'http://localhost:8200', path: 'secret/missing', method: 'app-id', appId: 'svc-demo-api' , userId: 'demo-live' })(confabulous, function(err, config) {
+        loader({ url: 'http://localhost:8200', path: 'secret/live/demo/missing', method: 'app-id', appId: 'svc-demo-api' , userId: 'demo-live' })(confabulous, function(err, config) {
             assert(err)
-            assert.equal(err.message, 'http://localhost:8200/v1/secret/missing returned 404')
+            assert.equal(err.message, 'http://localhost:8200/v1/secret/live/demo/missing returned 404')
             done()
         })
     })
 
     it('should ignore 404s when not mandatory', function(done) {
-        loader({ url: 'http://localhost:8200', path: 'secret/missing', method: 'app-id', appId: 'svc-demo-api' , userId: 'demo-live', mandatory: false })(confabulous, function(err, config) {
+        loader({ url: 'http://localhost:8200', path: 'secret/live/demo/missing', method: 'app-id', appId: 'svc-demo-api' , userId: 'demo-live', mandatory: false })(confabulous, function(err, config) {
             assert.equal(err, true)
             done()
         })

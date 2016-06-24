@@ -1,7 +1,11 @@
 {
+    "name": "demo-live",
     "path": {
         "sys/*": {
             "capabilities": ["deny"]
+        },
+        "secret/live/demo": {
+            "capabilities": ["create", "update", "list", "read", "delete"]
         },
         "secret/live/demo/*": {
             "capabilities": ["create", "update", "list", "read", "delete"]

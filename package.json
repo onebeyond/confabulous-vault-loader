@@ -11,7 +11,8 @@
   },
   "keywords": [
     "Confabulous",
-    "Etcd",
+    "Vault",
+    "Hashicorp",
     "Loader",
     "Config"
   ],

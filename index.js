@@ -1,4 +1,4 @@
-var debug = require('debug')('confabulous:loaders:http')
+var debug = require('debug')('confabulous:loaders:vault')
 var EventEmitter = require('events').EventEmitter
 var request = require('request')
 var async = require('async')

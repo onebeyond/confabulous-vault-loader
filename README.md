@@ -22,9 +22,10 @@ new Confabulous()
 |-----------|---------|-----------|---------|
 | url       | string  |           | URL of the vault server |
 | path      | string  |           | Path to the encrypted config |
-| method    | string  |           | Authentication method (currently only app-id is supported) |
+| method    | string  |           | Authentication method (currently only app-id and token is supported) |
 | appId     | string  |           | Application Id (required for authentication when using app-id method) |
 | userId    | string  |           | User Id (required for authentication when using app-id method) |
+| token     | string  |           | Vault token (required for authentication when using token method) |
 | mandatory | boolean | true      | Causes an error/reload_error to be emitted if the configuration does not exist |
 | watch     | object  |           | Polls the vault server for changes. Requires an interval, e.g. ```{ interval: '5m'}``` |
 | request   | object  | [see here](https://github.com/guidesmiths/confabulous/blob/master/lib/loaders/http.js#L14) | options that will be passed to [the underlying http client](https://github.com/request/request).

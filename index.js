@@ -33,6 +33,7 @@ module.exports = function(_options, postProcessors) {
             if (options.mandatory && !options.method) return cb(new Error('method is required'))
             if (options.method === 'app-id' && !options.appId) return cb(new Error('appId is required'))
             if (options.method === 'app-id' && !options.userId) return cb(new Error('userId is required'))
+            if (options.method === 'token' && !options.token) return cb(new Error('token is required'))
             if (options.watch && !options.watch.interval) return cb(new Error('watch interval is required'))
             cb(!options.url || !options.path || !options.method)
         }
@@ -49,6 +50,10 @@ module.exports = function(_options, postProcessors) {
                         cb()
                     })
                     break;
+                }
+                case 'token': {
+                  options.request.headers['X-Vault-Token'] = options.token
+                  break;
                 }
                 default: {
                     cb(new Error(format('Unsupported authentication method: %s', options.method)))

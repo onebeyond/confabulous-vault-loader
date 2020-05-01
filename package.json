@@ -7,7 +7,9 @@
     "test": "NODE_ENV=test mocha --recursive tests",
     "prepush": "npm run lint && npm test",
     "lint": "eslint .",
-    "vault": "docker run -it --link vault --rm -e VAULT_ADDR=http://vault:8200 --entrypoint=/bin/sh sjourdan/vault -c \"vault auth $VAULT_TOKEN &>/dev/null; vault $VAULT_ARGS\""
+    "vault": "docker run -it --link vault --rm -e VAULT_ADDR=http://vault:8200 --entrypoint=/bin/sh sjourdan/vault -c \"vault auth $VAULT_TOKEN &>/dev/null; vault $VAULT_ARGS\"",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "Confabulous",
@@ -24,7 +26,8 @@
     "lodash.contains": "^2.4.3",
     "lodash.merge": "^4.4.0",
     "parse-duration": "^0.1.1",
-    "request": "^2.72.0"
+    "request": "^2.72.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -44,5 +47,6 @@
   "bugs": {
     "url": "https://github.com/guidesmiths/confabulous-vault-loader/issues"
   },
-  "homepage": "https://github.com/guidesmiths/confabulous-vault-loader#readme"
+  "homepage": "https://github.com/guidesmiths/confabulous-vault-loader#readme",
+  "snyk": true
 }

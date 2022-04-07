@@ -19,7 +19,7 @@
   "author": "GuideSmiths Ltd",
   "license": "ISC",
   "dependencies": {
-    "async": "^2.0.0-rc.6",
+    "async": "^3.2.2",
     "debug": "^2.2.0",
     "lodash.contains": "^2.4.3",
     "lodash.merge": "^4.4.0",

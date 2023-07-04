@@ -1,3 +1,7 @@
+# ⚠️ This repository is not longer maintained ⚠️
+
+This project is not longer maintained and has been archived. More details in [One Beyond Governance Tiers](https://onebeyond-maintainers.netlify.app/governance/tiers)
+
 # Confabulous Vault Loader
 Confabulous-Vault-Loader is an Vault Loader for [Confabulous](https://github.com/guidesmiths/confabulous) - a hierarchical, asynchronous config loader and post processor.
 
